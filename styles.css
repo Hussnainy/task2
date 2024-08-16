@@ -1,0 +1,309 @@
+body {
+  background-image: url('https://th.bing.com/th/id/R.7416e495b1b66227c321446bfeb88766?rik=9AjUyeGMSVvgQQ&pid=ImgRaw&r=0');
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff;
+  font-display: border;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    margin: 0;
+  }
+.h1 {
+  color: #687;
+  syntax: calc(20px);
+}
+h2  {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2vh;
+    margin: 0;
+    text-decoration: wavy;
+  }
+  img {
+    float: left;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.container-button {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "bt-1 bt-2 bt-3"
+    "bt-4 bt-5 bt-6";
+  position: relative;
+  perspective: 800;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container-button:active {
+  transform: scale(0.95);
+}
+
+.hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+
+.bt-1 {
+  grid-area: bt-1;
+}
+
+.bt-2 {
+  grid-area: bt-2;
+}
+
+.bt-3 {
+  grid-area: bt-3;
+}
+
+.bt-4 {
+  grid-area: bt-4;
+}
+
+.bt-5 {
+  grid-area: bt-5;
+}
+
+.bt-6 {
+  grid-area: bt-6;
+}
+
+.bt-1:hover ~ button {
+  transform: rotateX(15deg) rotateY(-15deg) rotateZ(0deg);
+  box-shadow: -2px -2px #18181888;
+}
+
+.bt-1:hover ~ button::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px -2px #18181888;
+}
+
+.bt-3:hover ~ button {
+  transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
+  box-shadow: 2px -2px #18181888;
+}
+
+.bt-3:hover ~ button::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px -2px #18181888;
+}
+
+.bt-4:hover ~ button {
+  transform: rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
+  box-shadow: -2px 2px #18181888;
+}
+
+.bt-4:hover ~ button::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px 2px #18181888;
+}
+
+.bt-6:hover ~ button {
+  transform: rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
+  box-shadow: 2px 2px #18181888;
+}
+
+.bt-6:hover ~ button::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px 2px #18181888;
+}
+
+.hover:hover ~ button::before {
+  
+  background: transparent;
+}
+
+.hover:hover ~ button::after {
+  content: "Add to Card";
+  top: -150%;
+  transform: translate(-50%, 0);
+  font-size: 34px;
+  color: #f19c2b;
+}
+
+button {
+  position: absolute;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  border: 3px solid #f39923;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: #f5ae51;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+button::after {
+  content: "add-to-cart";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 47px;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+@keyframes shake {
+  0% {
+    left: 45%;
+  }
+
+  25% {
+    left: 54%;
+  }
+
+  50% {
+    left: 48%;
+  }
+
+  75% {
+    left: 52%;
+  }
+
+  100% {
+    left: 50%;
+  }
+}
+.container-button {
+  text-align: center;
+}
+
+.container-button button {
+  display: inline-block;
+  margin: 0 auto;
+}
+.container-button {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.container-button button {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.clicked {
+  transform: scale(0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #f5ae51;
+}
+.hovered {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #f5ae51;
+}
+
+footer {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #a58e0d;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.contact-info, .timings, .social-follow {
+  flex: 1;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.facebook-icon, .instagram-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.facebook-icon {
+  background-image: url('path-to-facebook-icon.png');
+}
+
+.instagram-icon {
+  background-image: url('path-to-instagram-icon.png');
+}
+
+.app-links {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.google-play, .app-store {
+  width: 140px;
+  height: 40px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.google-play {
+  background-image: url('path-to-google-play-badge.png');
+}
+
+.app-store {
+  background-image: url('path-to-app-store-badge.png');
+}
